@@ -1,4 +1,4 @@
-//PASTED ASSERT EQUAL FUNCTION TO TOP OF HEAD.JS
+//PASTED ASSERT EQUAL FUNCTION TO TOP OF tail.JS
 //function implementation
 const assertEqual = function(actual, expected) {
   //compare two values and print message
@@ -8,30 +8,31 @@ const assertEqual = function(actual, expected) {
     console.log(`🛑 Assertion Failed: ${actual} !== ${expected}`);
   }
 };
+//end of assert equal function
+
 //create function tail
- 
 const tail = function(inputArray) {
 
-let resultArray = [];
-
- //if one element return that element
- if (inputArray.length === 1) {
-  return inputArray[0];
+  //if one element, yeild empty array
+  if (inputArray.length === 1) {
+    return [];
   
-} else if (inputArray.length === 0) {
-  return 'undefined';
-}
-//if empty input array, yield undefined
+  } else if (inputArray.length === 0) {
+    return [];
+  }
+  //if empty input array, yield empty array
 
-//return LAST item in array 
-return inputArray.slice(-1);
-
+  return inputArray.slice(1);
+  //return LAST item in array
 
 };
+//test case 1
+const result = tail(["Hello", "Lighthouse", "Labs"]);
+assertEqual(result.length, 2); // ensure we get back two elements
+assertEqual(result[0], "Lighthouse"); // ensure first element is "Lighthouse"
+assertEqual(result[1], "Labs"); // ensure second element is "Labs"
 
-
-//TEST CODE
-assertEqual(tail([5,6,7]), 5);
-assertEqual(tail(["Hello", "Lighthouse", "Labs"]), "Hello");
-assertEqual(tail([4, 5, 6, 8, 11, 14, 12]), 7);
-assertEqual(tail([4, 5, 6, 8, 11, 12]), 12);
+// Test Case 2:
+const words = ["Yo Yo", "Lighthouse", "Labs"];
+tail(words); // no need to capture the return value since we are not checking it
+assertEqual(words.length, 3); // original array should still have 3 elements!
