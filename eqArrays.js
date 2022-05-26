@@ -6,6 +6,7 @@ const assertEqual = function(actual, expected) {
     console.log(`🛑 Assertion Failed: ${actual} !== ${expected}`);
   }
 };
+
 //function that takes in two arrays
 const eqArrays = function(array1, array2) {
   //if arrays are not the same length return false
