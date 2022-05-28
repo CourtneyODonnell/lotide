@@ -28,23 +28,22 @@ const eqArrays = function(array1, array2) {
 //END OF assertArraysEqual and eqArrays fxs
 
 
-//We'll implement a new function letterPositions DONE 
+//We'll implement a new function letterPositions DONE
 const letterPositions = function(sentence) {
   //result an object
   let results = {};
   //for loop with index
-  for(let i = 0; i < sentence.length; i++) {
+  for (let i = 0; i < sentence.length; i++) {
   //if sentence is not a string, then...
-    if( sentence[i] !== ' ') {
-      //push index to results 
-      if(results[sentence[i]]) {
+    if (sentence[i] !== ' ') {
+      //push index to results
+      if (results[sentence[i]]) {
         results[sentence[i]].push(i);
       } else {
-          //will return all the indices (zero-based positions) in the string where each character is found. DONE 
+        //will return all the indices (zero-based positions) in the string where each character is found. DONE
         results[sentence[i]] = [i];
-        }
       }
     }
+  }
   return results;
 };
-console.log(letterPositions("lighthouse in the house"));
