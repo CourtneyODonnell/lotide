@@ -1,13 +1,5 @@
-//PASTED ASSERT EQUAL FUNCTION TO TOP OF HEAD.JS
-//function implementation
-const assertEqual = function(actual, expected) {
-  //compare two values and print message
-  if (actual === expected) {
-    console.log(`✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+const assertEqual = require('./assertEqual');
+
 //create function head
 const head = function(inputArray) {
 
@@ -25,7 +17,4 @@ const head = function(inputArray) {
 };
 
 
-//TEST CODE
-assertEqual(head([5,6,7]), 5);
-assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
-assertEqual(head([4, 5, 6, 7, 'elephant']), 7);
+module.exports = head;
