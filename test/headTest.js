@@ -23,14 +23,3 @@ describe("#head", () => {
   });
 });
 
-
-
-//const assertEqual = require('../assertEqual');
-
-
-
-// // //TEST CODE
-// DONE assertEqual(head([5,6,7]), 5);
-// DONE assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
-// DONE assertEqual(head([4, 5, 6, 7, 'elephant']), 4);
-
