@@ -31,3 +31,5 @@ const countLetters = function(string) {
 };
 //test case:
 //console.log(countLetters('mississippi half step'));
+
+module.exports = countLetters;

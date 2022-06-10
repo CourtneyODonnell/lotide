@@ -96,3 +96,5 @@ const assertObjectsEqual = function(actual, expected) {
 // };
 // assertObjectsEqual(objectOne, objectTwo);
 // assertObjectsEqual(objectOne, objectThree);
+
+module.exports = assertObjectsEqual;

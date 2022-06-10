@@ -24,3 +24,5 @@ const findKeyByValue = (object, value) => {
     } //close if statement
   } //close for ...of loop
 }; //close fx
+
+module.exports = findKeyByValue;

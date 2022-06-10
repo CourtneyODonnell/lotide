@@ -89,3 +89,6 @@ const eqObjects = function(object1, object2) {
 // console.log('4.  should return false for check 2 of step 3:');
 // //actual check:
 // assertEqual(eqObjects(cd, cd2), false);
+
+
+module.exports = eqObjects;

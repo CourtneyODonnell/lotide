@@ -39,3 +39,5 @@ const findKey = function(object, callback) {
 // let expectedTest = "noma";
 // assertEqual(actualTest, expectedTest);
 // //x => x.stars === 2)); // => "noma"
+
+module.exports = findKey;
